@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // Display "Loading..." initially
-  outputTable.innerHTML = 
+   
 
   // Wait for all promises to resolve using Promise.all
   Promise.all(promises)
