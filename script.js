@@ -28,11 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // Display "Loading..." initially
-  outputTable.innerHTML = `
-    <tr>
-      <td colspan="2">Loading...</td>
-    </tr>
-  `;
+  outputTable.innerHTML = 
 
   // Wait for all promises to resolve using Promise.all
   Promise.all(promises)
@@ -41,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const totalTime = results.reduce((total, result) => total + result.timeTaken, 0);
 
       // Update the table with the results
+		outputTable.innerHTML = "";
       outputTable.innerHTML = `
         <tr>
           <td>${results[0].promiseName}</td>
